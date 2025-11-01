@@ -1,0 +1,22 @@
+# EEP 595 Clock Skew-Based Intrusion Detection System
+# Python Dependencies
+
+# Core scientific computing
+numpy>=1.21.0
+matplotlib>=3.5.0
+scipy>=1.7.0
+
+# Data handling and analysis
+pandas>=1.3.0
+
+# Type hints support
+typing-extensions>=4.0.0
+
+# Development and testing (optional)
+pytest>=6.0.0
+jupyter>=1.0.0
+ipython>=7.0.0
+
+# Additional utilities
+tqdm>=4.60.0  # Progress bars for long-running analysis
+seaborn>=0.11.0  # Enhanced plotting capabilities
