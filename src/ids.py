@@ -158,13 +158,13 @@ class IDS:
             try:
                 # Equation (1): O_avg[k] = (1/(N-1)) * Σ[i=2 to N] [a_i - (a_1 + (i-1)*μ_T[k-1])]
                 a1 = a[0]
-                indices = np.arange(2, self.N + 1)  # i = 2..N (vectorized like Tejas)
+                indices = np.arange(2, self.N + 1)  # i = 2..N (vectorized implementation)
                 expected_times = a1 + (indices - 1) * prev_mu_T_sec
                 actual_times = a[1:]  # Convert to match expected_times length
                 offsets_sec = actual_times - expected_times
                 
                 if len(offsets_sec) > 0:
-                    avg_offset_sec = np.sum(offsets_sec) / (self.N - 1)  # Match Tejas formula
+                    avg_offset_sec = np.sum(offsets_sec) / (self.N - 1)  # Calculate average offset
                     curr_avg_offset_us = avg_offset_sec * 1e6
                 else:
                     curr_avg_offset_us = 0.0
